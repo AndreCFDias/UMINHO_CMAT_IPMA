@@ -15,7 +15,7 @@ runtime: shiny
 
 ```{r setup, include=FALSE}
 #Finished by André Coelho Fiuza Dias
-#last update: 8 DEZ 2022
+#last update: 13 NOV 2023
 library(flexdashboard) #front-end
 library(knitr)
 library(readr)
@@ -39,14 +39,8 @@ library(trend)
 
 ```{r}
 # definir directoria
-#setwd("C:/Users/burrito/Desktop/Ultimate Project/Dados/Dash App")
-
-# setwd("F:/Diana/Documentos 31ago2020/Cerco/Estagios e Mestrados/2019 Joao Mendes UM")
-setwd("/Users/andredias/Desktop/uminho_cursos/ProjetoCMAT_22/github")
 # load bd's
-
 bd_dash2=read.csv2("ds_compl.csv")
-
 
 bd_dash_cavala2=bd_dash2[bd_dash2$EESPECIE=="Cavala",]
 bd_dash_sardinha2=bd_dash2[bd_dash2$EESPECIE=="Sardinha",]
@@ -56,7 +50,7 @@ bd_dash_outros2=bd_dash2[bd_dash2$EESPECIE=="Outros",]
 ###################################
 
 
-# bd dos mapas
+# bd maps
 bd_dash_porto2 =  aggregate(cbind(QVENDA,VVENDA) ~ year_sale + EESPECIE + PORTO, 
           data=bd_dash2, FUN=sum)
 portoss = c("VIANA DO CASTELO","POVOA DO VARZIM","V. CONDE","MATOSINHOS",
