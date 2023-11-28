@@ -5069,7 +5069,7 @@ selectInput(inputId="stm_v2", "Variável",
 br()
 selectInput(inputId="stm_e2", "Espécie",
             choices=c("Cavala", "Sardinha", "Biqueirao", 
-                      "Carapau-Braco", "Outros"))
+                      "Carapau-Branco", "Outros"))
 br()
 selectInput(inputId="stm_h2", "Porto",
             choices=c("VIANA DO CASTELO","MATOSINHOS","AVEIRO",
